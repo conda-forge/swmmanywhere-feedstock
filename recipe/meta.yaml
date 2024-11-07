@@ -1,5 +1,6 @@
 {% set name = "swmmanywhere" %}
 {% set version = "0.1.10" %}
+{% set python_min = "3.10 %}
 
 package:
   name: {{ name|lower }}
@@ -16,12 +17,12 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}.*
     - hatch-vcs
     - hatchling
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - cdsapi
     - cytoolz
     - geopandas >=1
@@ -50,6 +51,8 @@ requirements:
     - xarray
 
 test:
+  requires:
+    - python ={{ python_min }}
   imports:
     - swmmanywhere
   commands:
