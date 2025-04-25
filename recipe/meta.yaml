@@ -1,5 +1,5 @@
 {% set name = "swmmanywhere" %}
-{% set version = "0.1.10" %}
+{% set version = "0.1.12" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/swmmanywhere-{{ version }}.tar.gz
-  sha256: 3825bbba18432217e97af9e9902a945dadded308889a0541732820346c647049
+  sha256: 767b667b764acb94d940f707036bd52831ba28ff4a183af576e54984d3680a47
 
 build:
   noarch: python
@@ -17,7 +17,7 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}.*
+    - python {{ python_min }}
     - hatch-vcs
     - hatchling
     - pip
@@ -30,6 +30,7 @@ requirements:
     - joblib
     - jsonschema
     - loguru
+    - matplotlib-base
     - netcdf4
     - networkx >=3
     - numpy >=2
@@ -51,14 +52,13 @@ requirements:
     - xarray
 
 test:
-  requires:
-    - python ={{ python_min }}
   imports:
     - swmmanywhere
   commands:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   summary: SWMManywhere software
