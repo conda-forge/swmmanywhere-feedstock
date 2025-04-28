@@ -147,6 +147,3 @@ Feedstock Maintainers
 * [@cheginit](https://github.com/cheginit/)
 * [@dalonsoa](https://github.com/dalonsoa/)
 
-
-<!-- dummy commit to enable rerendering -->
-
