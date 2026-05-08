@@ -1,5 +1,5 @@
 {% set name = "swmmanywhere" %}
-{% set version = "0.1.17" %}
+{% set version = "0.2.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/swmmanywhere-{{ version }}.tar.gz
-  sha256: e8a7885123820fce236b781849b89772431614551b228c1e71767cfbd93f2216
+  sha256: 421b3a4dc6293902c796a59680d87432d6c2a65d6e32c14276a03ab192536957
 
 build:
   noarch: python
